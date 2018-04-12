@@ -46,6 +46,8 @@ public class Controller implements Initializable {
 
     }
 
+
+
     public void editItem(ActionEvent event){
         Student st = tableView.getSelectionModel().getSelectedItem();
         System.out.println(st);
@@ -64,6 +66,10 @@ public class Controller implements Initializable {
 
         stage.show();
 
+    }
+
+    public void onCloseInvent(){
+        System.out.println("Tis methos will be call on close event!!!!");
     }
 
 
