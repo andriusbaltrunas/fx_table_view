@@ -68,7 +68,7 @@ public class Controller implements Initializable {
 
     }
 
-    public void onCloseInvent(){
+    public void onCloseEvent(){
         System.out.println("Tis methos will be call on close event!!!!");
     }
 

@@ -18,7 +18,7 @@ public class Main extends Application {
 
         // using on close event in controller
         Controller controller = load.getController();
-        primaryStage.setOnHidden( event -> controller.onCloseInvent());
+        primaryStage.setOnHidden( event -> controller.onCloseEvent());
 
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
