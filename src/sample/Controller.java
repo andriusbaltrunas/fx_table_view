@@ -8,9 +8,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -35,6 +38,9 @@ public class Controller implements Initializable {
     @FXML
     private TableColumn<Student, String> surname;
 
+    @FXML
+    private ListView<String> itemsListView;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -44,8 +50,17 @@ public class Controller implements Initializable {
         surname.setCellValueFactory(new PropertyValueFactory<Student, String>("surname"));
         tableView.setItems(students);
 
+        ObservableList<String> items = FXCollections.observableArrayList("Andrius", "Jonas", "Pranas", "Kaziukas");
+        itemsListView.setItems(items);
+
     }
 
+    public void selectedListItem(MouseEvent event){
+        String selectedItem = itemsListView.getSelectionModel().getSelectedItem();
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText(selectedItem);
+        alert.show();
+    }
 
 
     public void editItem(ActionEvent event){
