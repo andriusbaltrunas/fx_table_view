@@ -87,6 +87,10 @@ public class Controller implements Initializable {
         System.out.println("Tis methos will be call on close event!!!!");
     }
 
+    public static void calledFromAnotherController(String name){
+        System.out.println("called from -> " + name);
+    }
+
 
     private List<Student> createDummyStudents() {
         List<Student> students = new ArrayList<>();

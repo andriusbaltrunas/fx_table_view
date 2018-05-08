@@ -23,4 +23,8 @@ public class SecondController {
         ObservableList<Student> students = Controller.students;
         students.add(new Student(Integer.valueOf(id.getText()), name.getText(), surname.getText()));
     }
+
+    public void callAnotherControllerMethod(ActionEvent event){
+        Controller.calledFromAnotherController("SecondController");
+    }
 }

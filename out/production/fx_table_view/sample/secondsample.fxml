@@ -15,6 +15,7 @@
             <TextField fx:id="name" layoutX="147.0" layoutY="179.0" promptText="Name" />
             <TextField fx:id="surname" layoutX="147.0" layoutY="259.0" promptText="Surname" />
             <Button layoutX="202.0" layoutY="350.0" mnemonicParsing="false" onAction="#save" text="Save" />
+            <Button layoutX="196.0" layoutY="484.0" mnemonicParsing="false" onAction="#callAnotherControllerMethod" text="call controller method" />
          </children>
         </Pane>
     </children>
